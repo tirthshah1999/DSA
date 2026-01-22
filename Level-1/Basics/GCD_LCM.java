@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class GCD_LCM {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n1 = scn.nextInt();
+        int n2 = scn.nextInt();
+        int o1 = n1, o2 = n2;
+
+        while (n2 % n1 != 0) {
+            int q = n2 / n1;
+            int r = n2 % n1;
+            n2 = n1;
+            n1 = r;
+        }
+
+        int gcd = n1;
+        int lcm = (o1 * o2) / gcd;
+        System.out.println(gcd);
+        System.out.println(lcm);
+
+    }
+}
